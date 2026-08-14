@@ -26,6 +26,7 @@
     };
 
     // Cached computed values
+    const isMobile = window.innerWidth <= 768;
     const c = {
         stepZ      : CFG.speed      * 0.0008,
         focal      : CFG.focalDepth / 100,
@@ -33,7 +34,7 @@
         turb       : CFG.turbulence * 0.2,
         glitter    : CFG.glitter    * 0.1,
         brightness : Math.min(1, CFG.brightness / 100),
-        trail      : CFG.trail      / 100,
+        trail      : (CFG.trail * (isMobile ? 0.9 : 1)) / 100,
     };
 
     // Parse hex colors to rgb strings (done once at startup)
