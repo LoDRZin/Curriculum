@@ -98,21 +98,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Mock Dashboard Menu Item Switcher
-    const dashMenuItems = document.querySelectorAll('.dash-menu .menu-item');
-    dashMenuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            dashMenuItems.forEach(m => m.classList.remove('active'));
-            item.classList.add('active');
-        });
-    });
-
-    // Reload Preview Simulation
+    // Reload Preview Simulation for iframe
     const reloadPreviewBtn = document.getElementById('reload-preview-btn');
+    const previewIframe = document.getElementById('preview-iframe');
     if (reloadPreviewBtn) {
         reloadPreviewBtn.addEventListener('click', () => {
             reloadPreviewBtn.style.transform = 'rotate(360deg)';
             reloadPreviewBtn.style.transition = 'transform 0.6s ease';
+            
+            if (previewIframe) {
+                // Force iframe reload
+                previewIframe.src = previewIframe.src;
+            }
+
             setTimeout(() => {
                 reloadPreviewBtn.style.transform = 'rotate(0deg)';
                 reloadPreviewBtn.style.transition = 'none';
