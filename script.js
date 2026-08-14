@@ -21,7 +21,7 @@
         turbulence    : 0,
         brightness    : 100,
         glitter       : 3,
-        trail         : 100,
+        trail         : 80,
         reverse       : false,
     };
 
