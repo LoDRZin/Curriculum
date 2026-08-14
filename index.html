@@ -6,19 +6,24 @@
     <meta name="description" content="Portfólio de Rodrigo de Castro Camelo, Desenvolvedor Full Stack">
     <title>Rodrigo de Castro Camelo | Portfólio</title>
     
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Icons (Phosphor Icons) -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Background Effects -->
     <div class="bg-effects">
+        <canvas id="starfield-canvas"></canvas>
         <div class="glow glow-1"></div>
         <div class="glow glow-2"></div>
     </div>
@@ -175,7 +180,7 @@
                         </div>
 
                         <div class="preview-content" style="padding: 0; overflow: hidden;">
-                            <iframe id="preview-iframe" src="https://lodrzin.github.io/BrasImports/dashboard.html" style="width: 100%; height: 550px; border: none; display: block;" title="BrasImports Interactive Preview"></iframe>
+                            <iframe id="preview-iframe" src="https://lodrzin.github.io/BrasImports/dashboard.html" style="width: 100%; height: 550px; border: none; display: block;" title="BrasImports Interactive Preview" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
