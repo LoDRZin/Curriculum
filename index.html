@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Rodrigo de Castro Camelo, Desenvolvedor Full Stack">
+    <title>Rodrigo de Castro Camelo | Portfólio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LoDRZin<span>.dev</span></a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link"><span>01.</span> Sobre</a>
+                <a href="#education" class="nav-link"><span>02.</span> Formação</a>
+                <a href="#projects" class="nav-link"><span>03.</span> Projetos</a>
+                <a href="#skills" class="nav-link"><span>04.</span> Skills</a>
+            </div>
+            <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">
+                <i class="ph ph-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Floating Contact Bar -->
+    <div class="social-bar">
+        <a href="https://www.linkedin.com/in/Rodrigo-Camelo" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="mailto:rodriguihho.naves@hotmail.com" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+        <a href="tel:+5561993088300" aria-label="Telefone"><i class="ph ph-phone"></i></a>
+        <div class="vertical-line"></div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="container">
+                <p class="hero-greeting">./hello-world</p>
+                <h1 class="hero-title">
+                    RODRIGO DE<br>
+                    <span class="highlight">CASTRO CAMELO</span>
+                </h1>
+                <h2 class="hero-role">
+                    <span id="typewriter" data-text="DESENVOLVEDOR FULL STACK EM FORMAÇÃO"></span><span class="cursor"></span>
+                </h2>
+                <p class="hero-desc">
+                    Apaixonado por tecnologia e focado na criação de soluções eficientes. Combinando lógica sólida e design moderno para construir experiências incríveis na web.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Ver Projetos <i class="ph-bold ph-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-outline">Mais Sobre Mim</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <div class="line"></div>
+                    <h2 class="section-title"><span>01.</span> Objetivo</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="about-content glass-card">
+                    <i class="ph-duotone ph-target about-icon"></i>
+                    <p class="body-text">
+                        Busco oportunidade na área de TI, com foco em Desenvolvimento Web, visando aplicar meus conhecimentos em programação e desenvolvimento Full Stack (<strong>PHP, Laravel e React</strong>), além de aprimorar continuamente minhas habilidades técnicas.
+                    </p>
+                    <div class="availability">
+                        <span class="badge"><i class="ph ph-clock"></i> Disponibilidade: Tarde</span>
+                        <span class="badge"><i class="ph ph-buildings"></i> Modalidade: Híbrido ou Remoto</span>
+                        <span class="badge"><i class="ph ph-map-pin"></i> Local: DF</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <div class="line"></div>
+                    <h2 class="section-title"><span>02.</span> Formação & Cursos</h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="timeline">
+                    <!-- UniProjeção -->
+                    <div class="timeline-item glass-card hover-lift">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="entry-header">
+                                <h3>UniProjeção</h3>
+                                <span class="date-badge">EM ANDAMENTO</span>
+                            </div>
+                            <h4 class="entry-subtitle">ETC — TECNOLOGIA DA INFORMAÇÃO</h4>
+                            <p class="entry-info">1º Período</p>
+                        </div>
+                    </div>
+
+                    <!-- Cursos -->
+                    <div class="timeline-item glass-card hover-lift">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="entry-header">
+                                <h3>Cursos Extracurriculares</h3>
+                            </div>
+                            <ul class="styled-list">
+                                <li><strong>ETC:</strong> T.I, Assistente Administrativo e Operador de Computador</li>
+                                <li><strong>CILC:</strong> Inglês — 6 anos de formação</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <div class="line"></div>
+                    <h2 class="section-title"><span>03.</span> Projetos</h2>
+                    <div class="line"></div>
+                </div>
+                
+                <!-- Case Preview Window (Directly replaces the old grid) -->
+                <div class="case-preview-wrapper" id="case-preview" style="margin-top:0;">
+                    <div class="case-header">
+                        <div class="case-info">
+                            <span class="case-tag"><span class="dot"></span> PRÉVIA INTERATIVA EM TEMPO REAL · TCC ACADÊMICO</span>
+                            <h3 class="case-title">BrasImports — Sistema de Gerenciamento de Importações</h3>
+                            <p class="case-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px; max-width: 750px;">
+                                Sistema completo para gerenciamento e facilitação de processos de importação. Integra APIs para rastreamento de pacotes em tempo real, cotação de câmbio e Inteligência Artificial.
+                            </p>
+                            <div class="project-tech" style="margin-top: 14px;">
+                                <span>Laravel</span>
+                                <span>Blade</span>
+                                <span>Tailwind</span>
+                                <span>Alpine.js</span>
+                                <span>AwesomeAPI</span>
+                                <span>ParcelsApp</span>
+                                <span>OpenRouter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="preview-win glass-card" style="margin-top: 20px;">
+                        <div class="preview-topbar">
+                            <div class="window-dots">
+                                <span class="dot r"></span>
+                                <span class="dot y"></span>
+                                <span class="dot g"></span>
+                            </div>
+                            <div class="window-address"><i class="ph ph-globe"></i> brasimports.app/dashboard</div>
+                            <div class="window-actions">
+                                <button id="reload-preview-btn" title="Recarregar Prévia"><i class="ph ph-arrow-clockwise"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="preview-content">
+                            <!-- Embedded Mock Interactive Dashboard for BrasImports -->
+                            <div class="mock-dashboard">
+                                <div class="dash-sidebar">
+                                    <div class="dash-logo"><i class="ph-bold ph-package"></i> BrasImports</div>
+                                    <div class="dash-menu">
+                                        <div class="menu-item active"><i class="ph ph-squares-four"></i> Dashboard</div>
+                                        <div class="menu-item"><i class="ph ph-truck"></i> Rastreamento</div>
+                                        <div class="menu-item"><i class="ph ph-currency-dollar"></i> Cotações (API)</div>
+                                        <div class="menu-item"><i class="ph ph-sparkle"></i> IA Assistente</div>
+                                    </div>
+                                </div>
+                                <div class="dash-main">
+                                    <div class="dash-top">
+                                        <h4>Painel de Gerenciamento de Importações</h4>
+                                        <span class="status-live"><i class="ph-fill ph-circle"></i> APIs Conectadas</span>
+                                    </div>
+                                    <div class="dash-cards">
+                                        <div class="dash-card">
+                                            <span class="card-lbl">Câmbio USD/BRL</span>
+                                            <span class="card-val">R$ 5,42 <small class="up">+0.4%</small></span>
+                                            <span class="card-sub">AwesomeAPI Live</span>
+                                        </div>
+                                        <div class="dash-card">
+                                            <span class="card-lbl">Pacotes Rastreados</span>
+                                            <span class="card-val">12 Ativos</span>
+                                            <span class="card-sub">ParcelsApp API</span>
+                                        </div>
+                                        <div class="dash-card">
+                                            <span class="card-lbl">Análise com IA</span>
+                                            <span class="card-val">OpenRouter</span>
+                                            <span class="card-sub">Otimização Fiscal</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-terminal-box">
+                                        <p><span class="p-accent">&gt; API status:</span> AwesomeAPI [200 OK] · ParcelsApp [200 OK] · OpenRouter AI [Ready]</p>
+                                        <p><span class="p-muted">&gt; Último rastreio:</span> NL849204912BR — <span class="p-accent">Em trânsito (Fiscalização Aduaneira)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preview-overlay">
+                                <span><i class="ph-bold ph-cursor-click"></i> Clique para Interagir com a Demonstração</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <div class="line"></div>
+                    <h2 class="section-title"><span>04.</span> Skills</h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="skills-container glass-card">
+                    <div class="skill-group">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="ph ph-desktop"></i> Hardware / Informática</span>
+                            <span class="skill-level">AVANÇADO · 85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="ph ph-file-code"></i> Laravel / PHP</span>
+                            <span class="skill-level">INTERMEDIÁRIO · 60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="ph ph-atom"></i> React / Next.js</span>
+                            <span class="skill-level">INTERMEDIÁRIO · 60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-info">
+                            <span class="skill-name"><i class="ph ph-translate"></i> Inglês</span>
+                            <span class="skill-level">B2 · 72%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="72%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-ticker">
+                    <div class="ticker-content">
+                        <span>#PHP</span><span>#LARAVEL</span><span>#REACT</span><span>#NEXT.JS</span><span>#TAILWIND</span><span>#ALPINE.JS</span><span>#C++</span><span>#PYTHON</span>
+                        <span>#PHP</span><span>#LARAVEL</span><span>#REACT</span><span>#NEXT.JS</span><span>#TAILWIND</span><span>#ALPINE.JS</span><span>#C++</span><span>#PYTHON</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <a href="https://github.com/rodrigo-camelo" target="_blank" rel="noopener" class="footer-link">
+                <p>Projetado e Desenvolvido por Rodrigo de Castro Camelo</p>
+                <div class="footer-icons">
+                    <i class="ph-fill ph-github-logo"></i>
+                    <i class="ph-fill ph-star"></i>
+                </div>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
