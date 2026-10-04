@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleBtn.addEventListener('click', () => {
         const next = htmlEl.classList.contains('dark') ? 'light' : 'dark';
         applyTheme(next);
-        localStorage.setItem('theme', next);
+        localStorage.setItem('curriculum_theme', next);
     });
 
     // 2. Typewriter Effect

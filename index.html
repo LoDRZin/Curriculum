@@ -10,7 +10,7 @@
     <!-- Aplica o tema salvo antes da pintura para evitar flash -->
     <script>
         (function () {
-            var saved = localStorage.getItem('theme');
+            var saved = localStorage.getItem('curriculum_theme');
             var theme = saved === 'dark' ? 'dark' : 'light';
             document.documentElement.className = theme;
         })();
