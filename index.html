@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+<html lang="pt-BR" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Rodrigo de Castro Camelo, Desenvolvedor Full Stack">
+    <meta name="theme-color" content="#F7F6F2">
     <title>Rodrigo de Castro Camelo | Portfólio</title>
-    
+
+    <!-- Aplica o tema salvo antes da pintura para evitar flash -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved === 'dark' ? 'dark' : 'light';
+            document.documentElement.className = theme;
+        })();
+    </script>
+
     <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
 
-    <!-- Fonts -->
+    <!-- Fonts (mesmas famílias do conectavagasdf) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Icons (Phosphor Icons) -->
     <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Background Effects -->
-    <div class="bg-effects">
-        <canvas id="starfield-canvas"></canvas>
+    <div class="bg-effects" aria-hidden="true">
         <div class="glow glow-1"></div>
         <div class="glow glow-2"></div>
     </div>
@@ -31,15 +40,15 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">LoDRZin<span>.dev</span></a>
+            <a href="#" class="brand"><span class="brand-mark">L.</span>LoDRZin<span class="brand-sub">.dev</span></a>
             <div class="nav-links">
-                <a href="#about" class="nav-link"><span>01.</span> Sobre</a>
-                <a href="#education" class="nav-link"><span>02.</span> Formação</a>
-                <a href="#projects" class="nav-link"><span>03.</span> Projetos</a>
-                <a href="#skills" class="nav-link"><span>04.</span> Skills</a>
+                <a href="#about" class="nav-link">Sobre mim</a>
+                <a href="#education" class="nav-link">Formação</a>
+                <a href="#projects" class="nav-link">Projetos</a>
+                <a href="#skills" class="nav-link">Skills</a>
             </div>
-            <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">
-                <i class="ph ph-sun"></i>
+            <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+                <i class="ph ph-moon"></i>
             </button>
         </div>
     </nav>
@@ -47,6 +56,7 @@
     <!-- Floating Contact Bar -->
     <div class="social-bar">
         <a href="https://www.linkedin.com/in/Rodrigo-Camelo" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="https://github.com/LoDRZin" target="_blank" rel="noopener" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
         <a href="mailto:rodriguinho.naves@hotmail.com" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
         <a href="tel:+5561993088300" aria-label="Telefone"><i class="ph ph-phone"></i></a>
         <div class="vertical-line"></div>
@@ -56,10 +66,10 @@
         <!-- Hero Section -->
         <section id="hero" class="hero section">
             <div class="container">
-                <p class="hero-greeting">./hello-world</p>
+                <span class="eyebrow">OLÁ, EU SOU O RODRIGO</span>
                 <h1 class="hero-title">
-                    RODRIGO DE<br>
-                    <span class="highlight">CASTRO CAMELO</span>
+                    Rodrigo de<br>
+                    <em class="highlight">Castro Camelo.</em>
                 </h1>
                 <h2 class="hero-role">
                     <span id="typewriter" data-text="DESENVOLVEDOR FULL STACK EM FORMAÇÃO"></span><span class="cursor"></span>
@@ -68,29 +78,76 @@
                     Apaixonado por tecnologia e focado na criação de soluções eficientes. Combinando lógica sólida e design moderno para construir experiências incríveis na web.
                 </p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">Ver Projetos <i class="ph-bold ph-arrow-right"></i></a>
-                    <a href="#about" class="btn btn-outline">Mais Sobre Mim</a>
+                    <a href="#projects" class="btn btn-primary">Ver projetos <i class="ph-bold ph-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-outline">Mais sobre mim</a>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- About Section (aba Sobre mim) -->
         <section id="about" class="about section reveal">
             <div class="container">
                 <div class="section-header">
                     <div class="line"></div>
-                    <h2 class="section-title"><span>01.</span> Objetivo</h2>
+                    <h2 class="section-title"><span>01.</span> Sobre <em>mim</em></h2>
                     <div class="line"></div>
                 </div>
-                <div class="about-content glass-card">
-                    <i class="ph-duotone ph-target about-icon"></i>
-                    <p class="body-text">
-                        Busco oportunidade na área de TI, com foco em Desenvolvimento Web, visando aplicar meus conhecimentos em programação e desenvolvimento Full Stack (<strong>PHP, Laravel e React</strong>), além de aprimorar continuamente minhas habilidades técnicas.
-                    </p>
-                    <div class="availability">
-                        <span class="badge"><i class="ph ph-clock"></i> Disponibilidade: Tarde</span>
-                        <span class="badge"><i class="ph ph-buildings"></i> Modalidade: Híbrido ou Remoto</span>
-                        <span class="badge"><i class="ph ph-map-pin"></i> Local: DF</span>
+
+                <div class="about-grid">
+                    <!-- Cartão de perfil -->
+                    <aside class="profile-card glass-card">
+                        <div class="profile-avatar" aria-hidden="true">RC</div>
+                        <h3 class="profile-name">Rodrigo de Castro Camelo</h3>
+                        <p class="profile-role">Desenvolvedor Full Stack em formação</p>
+                        <ul class="profile-list">
+                            <li><i class="ph ph-map-pin"></i> Distrito Federal, DF</li>
+                            <li><i class="ph ph-graduation-cap"></i> UniProjeção · TI (1º período)</li>
+                            <li><i class="ph ph-translate"></i> Inglês B2</li>
+                            <li><a href="mailto:rodriguinho.naves@hotmail.com"><i class="ph ph-envelope-simple"></i> rodriguinho.naves@hotmail.com</a></li>
+                            <li><a href="tel:+5561993088300"><i class="ph ph-phone"></i> (61) 99308-8300</a></li>
+                            <li><a href="https://www.linkedin.com/in/Rodrigo-Camelo" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i> /in/Rodrigo-Camelo</a></li>
+                            <li><a href="https://github.com/LoDRZin" target="_blank" rel="noopener"><i class="ph ph-github-logo"></i> github.com/LoDRZin</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Abas -->
+                    <div class="about-tabs glass-card">
+                        <div class="tab-list" role="tablist" aria-label="Sobre mim">
+                            <button class="tab-btn active" role="tab" id="tab-resumo" aria-selected="true" aria-controls="panel-resumo" data-tab="resumo"><i class="ph ph-user"></i> Resumo</button>
+                            <button class="tab-btn" role="tab" id="tab-objetivo" aria-selected="false" aria-controls="panel-objetivo" data-tab="objetivo" tabindex="-1"><i class="ph ph-target"></i> Objetivo</button>
+                            <button class="tab-btn" role="tab" id="tab-info" aria-selected="false" aria-controls="panel-info" data-tab="info" tabindex="-1"><i class="ph ph-identification-card"></i> Informações</button>
+                        </div>
+
+                        <div class="tab-panel active" role="tabpanel" id="panel-resumo" aria-labelledby="tab-resumo">
+                            <p class="body-text">
+                                Sou <strong>Rodrigo de Castro Camelo</strong>, estudante de Tecnologia da Informação e desenvolvedor Full Stack em formação. Gosto de transformar problemas reais em sistemas claros, rápidos e bonitos de usar — do hardware ao navegador.
+                            </p>
+                            <p class="body-text">
+                                Meus projetos combinam <strong>Laravel, PHP e React</strong> com integrações de APIs e Inteligência Artificial, sempre com foco em boas práticas e experiência do usuário.
+                            </p>
+                        </div>
+
+                        <div class="tab-panel" role="tabpanel" id="panel-objetivo" aria-labelledby="tab-objetivo" hidden>
+                            <p class="body-text">
+                                Busco oportunidade na área de TI, com foco em Desenvolvimento Web, visando aplicar meus conhecimentos em programação e desenvolvimento Full Stack (<strong>PHP, Laravel e React</strong>), além de aprimorar continuamente minhas habilidades técnicas.
+                            </p>
+                            <div class="availability">
+                                <span class="badge"><i class="ph ph-clock"></i> Disponibilidade: Tarde</span>
+                                <span class="badge"><i class="ph ph-buildings"></i> Modalidade: Híbrido ou Remoto</span>
+                                <span class="badge"><i class="ph ph-map-pin"></i> Local: DF</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel" role="tabpanel" id="panel-info" aria-labelledby="tab-info" hidden>
+                            <dl class="info-grid">
+                                <div><dt>Nome</dt><dd>Rodrigo de Castro Camelo</dd></div>
+                                <div><dt>Localização</dt><dd>Distrito Federal, DF</dd></div>
+                                <div><dt>Graduação</dt><dd>UniProjeção — Tecnologia da Informação (em andamento)</dd></div>
+                                <div><dt>Cursos</dt><dd>ETC: T.I, Assistente Administrativo e Operador de Computador</dd></div>
+                                <div><dt>Idiomas</dt><dd>Português (nativo) · Inglês B2 (CILC, 6 anos)</dd></div>
+                                <div><dt>Stack</dt><dd>PHP, Laravel, React, Next.js, Tailwind, Alpine.js</dd></div>
+                            </dl>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,10 +158,10 @@
             <div class="container">
                 <div class="section-header">
                     <div class="line"></div>
-                    <h2 class="section-title"><span>02.</span> Formação & Cursos</h2>
+                    <h2 class="section-title"><span>02.</span> Formação &amp; <em>cursos</em></h2>
                     <div class="line"></div>
                 </div>
-                
+
                 <div class="timeline">
                     <!-- UniProjeção -->
                     <div class="timeline-item glass-card hover-lift">
@@ -141,20 +198,30 @@
             <div class="container">
                 <div class="section-header">
                     <div class="line"></div>
-                    <h2 class="section-title"><span>03.</span> Projetos</h2>
+                    <h2 class="section-title"><span>03.</span> <em>Projetos</em></h2>
                     <div class="line"></div>
                 </div>
-                
-                <!-- Case Preview Window (Directly replaces the old grid) -->
-                <div class="case-preview-wrapper" id="case-preview" style="margin-top:0;">
+
+                <!-- Seletor de projetos -->
+                <div class="project-tabs" role="tablist" aria-label="Projetos">
+                    <button class="project-tab active" role="tab" aria-selected="true" data-project="brasimports" id="ptab-brasimports">
+                        <i class="ph ph-package"></i> BrasImports
+                    </button>
+                    <button class="project-tab" role="tab" aria-selected="false" data-project="conectavagas" id="ptab-conectavagas">
+                        <i class="ph ph-briefcase"></i> ConectaVagasDF
+                    </button>
+                </div>
+
+                <!-- Case: BrasImports -->
+                <div class="case-preview-wrapper project-panel active" id="project-brasimports" role="tabpanel" aria-labelledby="ptab-brasimports">
                     <div class="case-header">
                         <div class="case-info">
                             <span class="case-tag"><span class="dot"></span> PRÉVIA INTERATIVA EM TEMPO REAL · TCC ACADÊMICO</span>
                             <h3 class="case-title">BrasImports — Sistema de Gerenciamento de Importações</h3>
-                            <p class="case-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px; max-width: 750px;">
+                            <p class="case-desc">
                                 Sistema completo para gerenciamento e facilitação de processos de importação. Integra APIs para rastreamento de pacotes em tempo real, cotação de câmbio e Inteligência Artificial.
                             </p>
-                            <div class="project-tech" style="margin-top: 14px;">
+                            <div class="project-tech">
                                 <span>Laravel</span>
                                 <span>Blade</span>
                                 <span>Tailwind</span>
@@ -166,7 +233,7 @@
                         </div>
                     </div>
 
-                    <div class="preview-win glass-card" style="margin-top: 20px;">
+                    <div class="preview-win glass-card">
                         <div class="preview-topbar">
                             <div class="window-dots">
                                 <span class="dot r"></span>
@@ -175,12 +242,52 @@
                             </div>
                             <div class="window-address"><i class="ph ph-globe"></i> brasimports.app/dashboard</div>
                             <div class="window-actions">
-                                <button id="reload-preview-btn" title="Recarregar Prévia"><i class="ph ph-arrow-clockwise"></i></button>
+                                <button class="reload-preview-btn" data-target="preview-brasimports" title="Recarregar Prévia"><i class="ph ph-arrow-clockwise"></i></button>
                             </div>
                         </div>
+                        <div class="preview-content">
+                            <iframe id="preview-brasimports" class="preview-iframe" src="https://lodrzin.github.io/BrasImports/dashboard.html" title="BrasImports Interactive Preview" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="preview-content" style="padding: 0; overflow: hidden;">
-                            <iframe id="preview-iframe" src="https://lodrzin.github.io/BrasImports/dashboard.html" style="width: 100%; height: 550px; border: none; display: block;" title="BrasImports Interactive Preview" loading="lazy"></iframe>
+                <!-- Case: ConectaVagasDF (sistema da facul) -->
+                <div class="case-preview-wrapper project-panel" id="project-conectavagas" role="tabpanel" aria-labelledby="ptab-conectavagas" hidden>
+                    <div class="case-header">
+                        <div class="case-info">
+                            <span class="case-tag"><span class="dot"></span> PRÉVIA INTERATIVA EM TEMPO REAL · PROJETO ACADÊMICO</span>
+                            <h3 class="case-title">ConectaVagasDF — Apoio para quem busca emprego</h3>
+                            <p class="case-desc">
+                                Plataforma que ajuda quem procura emprego a criar currículo, treinar entrevistas e organizar a busca por vagas, com assistência por IA, cursos interativos e modo claro/escuro.
+                            </p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Vite</span>
+                                <span>Cloudflare Workers</span>
+                                <span>D1 / SQLite</span>
+                                <span>Gemini</span>
+                                <span>OpenRouter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="preview-win glass-card">
+                        <div class="preview-topbar">
+                            <div class="window-dots">
+                                <span class="dot r"></span>
+                                <span class="dot y"></span>
+                                <span class="dot g"></span>
+                            </div>
+                            <div class="window-address"><i class="ph ph-globe"></i> conectavagasdf.anthraxy.com</div>
+                            <div class="window-actions">
+                                <a class="open-preview-link" href="https://conectavagasdf.anthraxy.com/" target="_blank" rel="noopener" title="Abrir em nova aba"><i class="ph ph-arrow-square-out"></i></a>
+                                <button class="reload-preview-btn" data-target="preview-conectavagas" title="Recarregar Prévia"><i class="ph ph-arrow-clockwise"></i></button>
+                            </div>
+                        </div>
+                        <div class="preview-content">
+                            <!-- O src é carregado só quando a aba é aberta (data-src). -->
+                            <iframe id="preview-conectavagas" class="preview-iframe" data-src="https://conectavagasdf.anthraxy.com/" title="ConectaVagasDF Interactive Preview"></iframe>
                         </div>
                     </div>
                 </div>
@@ -192,10 +299,10 @@
             <div class="container">
                 <div class="section-header">
                     <div class="line"></div>
-                    <h2 class="section-title"><span>04.</span> Skills</h2>
+                    <h2 class="section-title"><span>04.</span> <em>Skills</em></h2>
                     <div class="line"></div>
                 </div>
-                
+
                 <div class="skills-container glass-card">
                     <div class="skill-group">
                         <div class="skill-info">
@@ -206,7 +313,7 @@
                             <div class="progress-fill" data-width="85%"></div>
                         </div>
                     </div>
-                    
+
                     <div class="skill-group">
                         <div class="skill-info">
                             <span class="skill-name"><i class="ph ph-file-code"></i> Laravel / PHP</span>
@@ -237,7 +344,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="tech-ticker">
                     <div class="ticker-content">
                         <span>#PHP</span><span>#LARAVEL</span><span>#REACT</span><span>#NEXT.JS</span><span>#TAILWIND</span><span>#ALPINE.JS</span><span>#C++</span><span>#PYTHON</span>
@@ -250,7 +357,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <a href="https://github.com/rodrigo-camelo" target="_blank" rel="noopener" class="footer-link">
+            <a href="https://github.com/LoDRZin" target="_blank" rel="noopener" class="footer-link">
                 <p>Projetado e Desenvolvido por Rodrigo de Castro Camelo</p>
                 <div class="footer-icons">
                     <i class="ph-fill ph-github-logo"></i>
